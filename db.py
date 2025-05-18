@@ -8,7 +8,7 @@ db = client.digitalcosting  # or your DB name
 
 try:
     # The ping command is cheap and does not require auth.
-    client.admin.command('ping')
-    print("✅ Successfully connected to MongoDB!")
-except ConnectionFailure:
-    print("❌ Server not available")
+        client.admin.command('ping')
+        print("✅ Successfully connected to MongoDB!")
+except Exception as e:
+        print("❌ Server not available:", e)
